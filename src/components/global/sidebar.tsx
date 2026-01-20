@@ -24,13 +24,13 @@ export const Sidebar: React.FC<Sidebar> = ({ onShow, show }) => {
   const { toastSuccess } = useToast();
 
   const getActiveClass = (isActive: boolean, type = 'default') => {
-    const activeClasses = "text-white bg-sky-500";
-    let defaultClasses = "hover:text-white text-sky-500 hover:bg-sky-700";
+    const activeClasses = "text-white bg-emerald-500";
+    let defaultClasses = "hover:text-white text-emerald-500 hover:bg-emerald-700";
 
     if (type === 'default') {
-      defaultClasses += " border border-sky-500";
+      defaultClasses += " border border-emerald-500";
     } else if (type === 'dropdown') {
-      defaultClasses += " border border-sky-300";
+      defaultClasses += " border border-emerald-300";
     }
 
     return isActive ? activeClasses : defaultClasses;
@@ -45,7 +45,7 @@ export const Sidebar: React.FC<Sidebar> = ({ onShow, show }) => {
       className={`
                 fixed my-20 ml-3 left-0 top-0 bottom-0
                 overflow-y-auto rounded-lg p-3
-                shadow-lg shadow-gray-400 border border-sky-300 bg-white
+                shadow-lg shadow-gray-400 border border-emerald-300 bg-white
                 ${show ? "w-[250px]" : "w-[80px]"}
             `}
     >
@@ -62,16 +62,14 @@ export const Sidebar: React.FC<Sidebar> = ({ onShow, show }) => {
           <TbArrowBarRight />
         }
       </ButtonBlackBorder>
-      <div className="flex flex-wrap items-center gap-2 justify-center mb-4">
+      <div className="flex flex-col flex-wrap items-center gap-2 justify-center mb-4">
         <Image
           src={logo || "/placeholder-logo.png"}
           alt="logo"
           width={40}
           height={40}
         />
-        {show &&
-          <h1 className="font-bold text-sky-600 uppercase border-b border-sky-600 text-center">{app}</h1>
-        }
+        <h1 className="font-bold text-emerald-600 uppercase border-b border-emerald-600 text-center">BADAN PENDAPATAN, PENGELOLAAN KEUANGAN DAN ASET DAERAH (BPPKAD)</h1>
       </div>
       <ul className="flex flex-col gap-2">
         <Link

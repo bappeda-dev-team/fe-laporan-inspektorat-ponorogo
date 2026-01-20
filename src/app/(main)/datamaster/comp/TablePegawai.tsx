@@ -44,7 +44,7 @@ const TablePegawai = () => {
         const fetchPegawai = async () => {
             try {
                 setLoading(true);
-                apiFetch(`/api/v1/tpp/jabatan/detail/findall`)
+                apiFetch(`/api/v1/tpp/jabatan/detail/master/opd/${branding?.opd}`)
                     .then(resp => {
                         setData(resp);
                     }).catch(err => {
@@ -152,7 +152,7 @@ const TablePegawai = () => {
                                 ))
                                 :
                                 <tr>
-                                    <td colSpan={5} className="border border-yellow-500 px-6 py-4">Data Pegawai Kosong</td>
+                                    <td colSpan={10} className="border border-yellow-500 px-6 py-4">Data Pegawai Kosong</td>
                                 </tr>
                             }
                         </tbody>

@@ -29,8 +29,6 @@ export const ModalKinerjaKonker: React.FC<Modal> = ({ isOpen, onClose, onSuccess
         defaultValues: {
             bukti_dukung: "",
             bulan: branding?.bulan?.value,
-            faktor_pendorong: Data?.faktor_pendorong || "",
-            faktor_penghambat: Data?.faktor_penghambat || "",
             id_program_unggulan: id_program || 0,
             id_pohon: Data?.id_pohon,
             id_rencana_kinerja: String(Data?.id_pohon || ""),
@@ -40,20 +38,22 @@ export const ModalKinerjaKonker: React.FC<Modal> = ({ isOpen, onClose, onSuccess
             rencana_aksi: Data?.rencana_aksi,
             realisasi_anggaran: Number(Data?.realisasi_anggaran),
             rekomendasi_tl: Data?.rekomendasi_tl || "",
-            risiko_hukum: Data?.risiko_hukum,
-            tahun: String(branding?.tahun?.value)
+            tahun: String(branding?.tahun?.value),
+            analisa_pendapatan_sumber_dana_pendapatan: Data?.analisa_pendapatan_sumber_dana_pendapatan,
+            catatan_realisasi_anggaran: Data?.catatan_realisasi_anggaran,
+            catatan_penataan_usaha_keuangan: Data?.catatan_penataan_usaha_keuangan,
+            catatan_pelaporan_keuangan: Data?.catatan_pelaporan_keuangan,
+            catatan_pelaporan_aset: Data?.catatan_pelaporan_aset,
         }
     });
 
     const [Proses, setProses] = useState<boolean>(false);
     const { toastError, toastSuccess } = useToast();
-    const url = `/api/v1/timkerja/realisasianggaran` 
-        const onSubmit: SubmitHandler<FormValue> = async (data) => {
+    const url = `/api/v1/timkerja/realisasianggaran`
+    const onSubmit: SubmitHandler<FormValue> = async (data) => {
         const payload = {
             bukti_dukung: "",
             bulan: branding?.bulan?.value,
-            faktor_pendorong: data.faktor_pendorong,
-            faktor_penghambat: data.faktor_penghambat,
             id_program_unggulan: id_program || 0,
             id_pohon: Data?.id_pohon,
             id_rencana_kinerja: String(Data?.id_pohon || ""),
@@ -63,7 +63,11 @@ export const ModalKinerjaKonker: React.FC<Modal> = ({ isOpen, onClose, onSuccess
             rencana_aksi: data.rencana_aksi,
             realisasi_anggaran: Number(data.realisasi_anggaran),
             rekomendasi_tl: data.rekomendasi_tl,
-            risiko_hukum: data.risiko_hukum,
+            analisa_pendapatan_sumber_dana_pendapatan: data?.analisa_pendapatan_sumber_dana_pendapatan,
+            catatan_realisasi_anggaran: data?.catatan_realisasi_anggaran,
+            catatan_penataan_usaha_keuangan: data?.catatan_penataan_usaha_keuangan,
+            catatan_pelaporan_keuangan: data?.catatan_pelaporan_keuangan,
+            catatan_pelaporan_aset: data?.catatan_pelaporan_aset,
             tahun: String(branding?.tahun?.value)
         }
         // console.log(payload);
@@ -135,35 +139,57 @@ export const ModalKinerjaKonker: React.FC<Modal> = ({ isOpen, onClose, onSuccess
                     )}
                 />
                 <Controller
-                    name="faktor_pendorong"
+                    name="analisa_pendapatan_sumber_dana_pendapatan"
                     control={control}
                     render={({ field }) => (
                         <FloatingLabelInput
                             {...field}
-                            id="faktor_pendorong"
-                            label="faktor pendorong"
+                            id="analisa_pendapatan_sumber_dana_pendapatan"
+                            label="Analisa Pendapatan Sumber Dana Pendapatan"
                         />
                     )}
                 />
                 <Controller
-                    name="faktor_penghambat"
+                    name="catatan_realisasi_anggaran"
                     control={control}
                     render={({ field }) => (
                         <FloatingLabelInput
                             {...field}
-                            id="faktor_penghambat"
-                            label="faktor penghambat"
+                            id="catatan_realisasi_anggaran"
+                            label="Catatan Realisasi Anggaran"
                         />
                     )}
                 />
                 <Controller
-                    name="risiko_hukum"
+                    name="catatan_penataan_usaha_keuangan"
                     control={control}
                     render={({ field }) => (
                         <FloatingLabelInput
                             {...field}
-                            id="risiko_hukum"
-                            label="Risiko Hukum"
+                            id="catatan_penataan_usaha_keuangan"
+                            label="Catatan Penataan Usaha Keuangan"
+                        />
+                    )}
+                />
+                <Controller
+                    name="catatan_pelaporan_keuangan"
+                    control={control}
+                    render={({ field }) => (
+                        <FloatingLabelInput
+                            {...field}
+                            id="catatan_pelaporan_keuangan"
+                            label="Catatan Pelaporan Keuangan"
+                        />
+                    )}
+                />
+                <Controller
+                    name="catatan_pelaporan_aset"
+                    control={control}
+                    render={({ field }) => (
+                        <FloatingLabelInput
+                            {...field}
+                            id="catatan_pelaporan_aset"
+                            label="Catatan Pelaporan Aset"
                         />
                     )}
                 />

@@ -182,9 +182,11 @@ export const Table: React.FC<Table> = ({ data }) => {
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Pagu Anggaran</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Realisasi Anggaran</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Rencana Aksi</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Faktor Pendorong</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Faktor Penghambat</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Risiko Hukum</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Analisa Pendapatan Sumber Dana Pendapatan</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Realisasi Anggaran</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Penataan Usaha Keuangan</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Pelaporan Keuangan</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Pelaporan Aset</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Rekomendasi Tindak Lanjut</th>
               <th className="border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Bukti Pendukung</th>
             </tr>
@@ -206,7 +208,9 @@ export const Table: React.FC<Table> = ({ data }) => {
               <th className="border-r border-b py-1 border-gray-300 text-center">15</th>
               <th className="border-r border-b py-1 border-gray-300 text-center">16</th>
               <th className="border-r border-b py-1 border-gray-300 text-center">17</th>
-              <th className="border-b py-1 border-gray-300 text-center">18</th>
+              <th className="border-r border-b py-1 border-gray-300 text-center">18</th>
+              <th className="border-r border-b py-1 border-gray-300 text-center">19</th>
+              <th className="border-b py-1 border-gray-300 text-center">20</th>
             </tr>
           </thead>
           {LoadingProgram ?
@@ -401,19 +405,31 @@ export const Table: React.FC<Table> = ({ data }) => {
                             </td>
                             <td className="border border-blue-500 px-6 py-4">
                               <div className="flex flex-col items-center justify-center gap-1">
-                                {p.faktor_pendorong || ""}
+                                analisa pendapatan sumber dana pendapatan
                                 <EditButton onClick={() => handleModalKonker(p, item.kode_tim, item.id_program_unggulan)} />
                               </div>
                             </td>
                             <td className="border border-blue-500 px-6 py-4">
                               <div className="flex flex-col items-center justify-center gap-1">
-                                {p.faktor_penghambat || ""}
+                                catatan realisasi anggaran
                                 <EditButton onClick={() => handleModalKonker(p, item.kode_tim, item.id_program_unggulan)} />
                               </div>
                             </td>
                             <td className="border border-blue-500 px-6 py-4">
                               <div className="flex flex-col items-center justify-center gap-1">
-                                {p.risiko_hukum || ""}
+                                catatan penataan usaha keuangan
+                                <EditButton onClick={() => handleModalKonker(p, item.kode_tim, item.id_program_unggulan)} />
+                              </div>
+                            </td>
+                            <td className="border border-blue-500 px-6 py-4">
+                              <div className="flex flex-col items-center justify-center gap-1">
+                                 catatan pelaporan keuangan
+                                <EditButton onClick={() => handleModalKonker(p, item.kode_tim, item.id_program_unggulan)} />
+                              </div>
+                            </td>
+                            <td className="border border-blue-500 px-6 py-4">
+                              <div className="flex flex-col items-center justify-center gap-1">
+                                catatan pelaporan aset
                                 <EditButton onClick={() => handleModalKonker(p, item.kode_tim, item.id_program_unggulan)} />
                               </div>
                             </td>
