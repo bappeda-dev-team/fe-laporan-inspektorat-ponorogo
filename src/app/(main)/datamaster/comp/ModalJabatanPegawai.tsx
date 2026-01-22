@@ -66,7 +66,7 @@ export const ModalJabatanPegawai: React.FC<Modal> = ({ isOpen, onClose, onSucces
             pangkat: Data?.pangkat,
             golongan: Data?.golongan,
             basicTpp: Data?.basicTpp ?? null,
-            pajak: Data ? {
+            pajak: Data?.pajak ? {
                 value: Data.pajak,
                 label: `${Data.pajak}%`,
             } : null,
