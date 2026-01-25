@@ -186,7 +186,7 @@ export const Table: React.FC<Table> = ({ data }) => {
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Analisa</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Pengendalian</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Pemantauan</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Laporan Hasil Pemantauan</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Laporan Hasil pemantauan</th>
               <th className="border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Bukti Pendukung</th>
             </tr>
             <tr className="text-white bg-blue-600">
