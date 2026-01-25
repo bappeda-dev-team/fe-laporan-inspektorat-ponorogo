@@ -182,12 +182,11 @@ export const Table: React.FC<Table> = ({ data }) => {
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Pagu Anggaran</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Realisasi Anggaran</th>
               <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Rencana Aksi</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Analisa Pendapatan Sumber Dana Pendapatan</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Realisasi Anggaran</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Penataan Usaha Keuangan</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Pelaporan Keuangan</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Catatan Pelaporan Aset</th>
-              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Rekomendasi Tindak Lanjut</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Identifikasi</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Analisa</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Pengendalian</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Pemantauan</th>
+              <th className="border-r border-b py-3 px-4 border-gray-300 min-w-[250px] text-center">Laporan Hasil Pemantauan</th>
               <th className="border-b py-3 px-4 border-gray-300 min-w-[200px] text-center">Bukti Pendukung</th>
             </tr>
             <tr className="text-white bg-blue-600">
@@ -209,8 +208,7 @@ export const Table: React.FC<Table> = ({ data }) => {
               <th className="border-r border-b py-1 border-gray-300 text-center">16</th>
               <th className="border-r border-b py-1 border-gray-300 text-center">17</th>
               <th className="border-r border-b py-1 border-gray-300 text-center">18</th>
-              <th className="border-r border-b py-1 border-gray-300 text-center">19</th>
-              <th className="border-b py-1 border-gray-300 text-center">20</th>
+              <th className="border-b py-1 border-gray-300 text-center">19</th>
             </tr>
           </thead>
           {LoadingProgram ?

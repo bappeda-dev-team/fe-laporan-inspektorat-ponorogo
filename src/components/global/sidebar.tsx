@@ -24,13 +24,13 @@ export const Sidebar: React.FC<Sidebar> = ({ onShow, show }) => {
   const { toastSuccess } = useToast();
 
   const getActiveClass = (isActive: boolean, type = 'default') => {
-    const activeClasses = "text-white bg-emerald-500";
-    let defaultClasses = "hover:text-white text-emerald-500 hover:bg-emerald-700";
+    const activeClasses = "text-white bg-gray-600";
+    let defaultClasses = "hover:text-white text-gray-600 hover:bg-gray-600";
 
     if (type === 'default') {
-      defaultClasses += " border border-emerald-500";
+      defaultClasses += " border border-gray-600";
     } else if (type === 'dropdown') {
-      defaultClasses += " border border-emerald-300";
+      defaultClasses += " border border-gray-600";
     }
 
     return isActive ? activeClasses : defaultClasses;
@@ -45,7 +45,7 @@ export const Sidebar: React.FC<Sidebar> = ({ onShow, show }) => {
       className={`
                 fixed my-20 ml-3 left-0 top-0 bottom-0
                 overflow-y-auto rounded-lg p-3
-                shadow-lg shadow-gray-400 border border-emerald-300 bg-white
+                shadow-lg shadow-gray-400 border border-gray-600 bg-white
                 ${show ? "w-[250px]" : "w-[80px]"}
             `}
     >
@@ -70,7 +70,7 @@ export const Sidebar: React.FC<Sidebar> = ({ onShow, show }) => {
           height={40}
         />
         {show &&
-          <h1 className="font-bold text-emerald-600 uppercase border-b border-emerald-600 text-center">BADAN PENDAPATAN, PENGELOLAAN KEUANGAN DAN ASET DAERAH (BPPKAD)</h1>
+          <h1 className="font-bold text-gray-600 uppercase border-b border-gray-600 text-center">INSPEKTORAT KAB PONOROGO</h1>
         }
       </div>
       <ul className="flex flex-col gap-2">
