@@ -74,7 +74,7 @@ export function useCetakPenilaianTim(
                 // Basic TPP Konker
                 { content: `Rp.${formatRupiah(item.tpp_pegawai?.tpp_basic) || 0}` },
 
-                // Nilai Kinerja Bappeda
+                // Nilai Kinerja
                 {
                     content: `${item.kinerja_bappeda || 0}`,
                     styles: { halign: "center" }
@@ -107,7 +107,7 @@ export function useCetakPenilaianTim(
             "Jabatan Dalam Tim",
             "Nama Tim",
             "Basic TPP Konker",
-            "Nilai Kinerja Bappeda",
+            "Nilai Kinerja",
             "Nilai Kinerja Tim",
             "Nilai Kinerja Person",
             "Nilai Akhir",
