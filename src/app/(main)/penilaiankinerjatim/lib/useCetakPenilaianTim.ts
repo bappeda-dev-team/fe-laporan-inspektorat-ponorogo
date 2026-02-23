@@ -37,7 +37,7 @@ export function useCetakPenilaianTim(
 
         doc.setFontSize(12);
         doc.text(
-            "BADAN PERENCANAAN PEMBANGUNAN, RISET DAN INOVASI DAERAH",
+            "INSPEKTORAT",
             pageWidth / 2,
             20,
             { align: "center" }
