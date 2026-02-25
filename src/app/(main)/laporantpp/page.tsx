@@ -25,8 +25,8 @@ const LaporanTpp = () => {
         if (!isReady) {
             return [null, null];
         }
-        return [`/api/v1/timkerjainspektorat/laporan_tpp?tahun=${branding?.tahun?.value}&bulan=${branding?.bulan?.value}`,
-        `/api/v1/timkerjainspektorat/laporan_tpp_all?tahun=${branding?.tahun?.value}&bulan=${branding?.bulan?.value}`
+        return [`/api/v1/timkerjainspektorat/laporan_tpp?tahun=${branding?.tahun?.value}&bulan=${branding?.bulan?.value}&kodeOpd=${branding?.opd}`,
+        `/api/v1/timkerjainspektorat/laporan_tpp_all?tahun=${branding?.tahun?.value}&bulan=${branding?.bulan?.value}&kodeOpd=${branding?.opd}`
         ];
     }, [isReady, tahun, bulan]);
 
